@@ -1,0 +1,54 @@
+{
+    "patient_demography": {
+        "patientID":"P441",
+        "firstName":"patient",
+        "lastName":"dh",
+        "dateOfBirth":"10/10/1990",
+        "weight":"100",
+        "height":"200",
+        "sex":"Female"
+    },
+
+    "patient_contact": {
+        "countryCode":"91",
+        "primaryContactNo":"1234567890",
+        "emailID":"afsfgsg@gmail.com",
+        "country":"American Samoa",
+        "zipCode":"123456",
+        "streetAdress1":"akjsbxwjsxwsx",
+        "streetAdress2":"nkcebejkwwxwxw",
+        "state":"kerela",
+        "city":"kochi",
+        "emergencyContactNo":"9876543210",
+        "emergencyContactName":"skjbxwix"
+    },
+
+    "provider_info": {
+        "prescribingPhysician":"Robert Taylor",
+        "referalPhysician":"Dr Shetty",
+        "interpretingPhysician":"Robert Taylor",
+        "preliminaryInterpretingPhysician":"None",
+        "technician":"Robert Taylor"
+    },
+
+    "procedure_info": {
+        "prescriptionID":"P226",
+        "orderID":"sjchbe",
+        "primaryClinicalIndication":"sw kcjksc",
+        "biosensorID":"DP049",
+        "procedureDuration":"5-day",
+        "locationGroup":"Block-A-Floor-1"
+    },
+
+    "additional_info": {
+        "additionalInformation":"jchjkjfukjgljkc",
+        "pacemaker":"False",
+        "icd":"False"
+    },
+
+    "billing_info": {
+        "billingIndication":"Billing1",
+        "billingMethod":"Cash"
+    }
+
+}
