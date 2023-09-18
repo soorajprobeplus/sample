@@ -26,7 +26,7 @@ browser.maximize_window()
 #browser.implicitly_wait(10)
 #https://www.ecgvue.site/  http://10.10.5.76/
 browser.implicitly_wait(0.5)
-browser.get("http://10.10.5.76/")
+browser.get("https://www.ecgvue.site/")
 
 faker=Faker()
 
@@ -185,12 +185,12 @@ def patient_demographic_funct(demography_data,locator):
 
     wait_until_page_load_by_class_name('mat-button')
 
-    time.sleep(.2)
+    #time.sleep(.1)
 
 
     elements=find_elements_by_class_name('mat-input-element')
 
-
+    #time.sleep(.1)
     #  Patient ID
     try:
         element=find_element_by_name(str(locator['patient_id']))
@@ -200,6 +200,7 @@ def patient_demographic_funct(demography_data,locator):
     except Exception as ex:
         print("Error from patient ID",str(ex)) 
 
+    time.sleep(.1)
     # First name
     try:
         element=find_element_by_name(str(locator['first_name']))
@@ -208,6 +209,7 @@ def patient_demographic_funct(demography_data,locator):
     except Exception as ex:
         print("Error from first name",str(ex)) 
     
+    #time.sleep(.1)
     # Last name
     try:
         element=find_element_by_name(str(locator['last_name']))
@@ -216,6 +218,7 @@ def patient_demographic_funct(demography_data,locator):
     except Exception as ex:
         print("Error from last name",str(ex)) 
 
+    #time.sleep(.1)
     # Date of birth
     try:
         element=find_element_by_name(str(locator['date_of_birth']))
@@ -223,6 +226,7 @@ def patient_demographic_funct(demography_data,locator):
     except Exception as ex:
         print("Error from date of birth",str(ex)) 
 
+    #time.sleep(.1)
     # Weight
     try:
         element=find_element_by_name(str(locator['weight']))
@@ -231,6 +235,7 @@ def patient_demographic_funct(demography_data,locator):
     except Exception as ex:
         print("Error from weight",str(ex)) 
 
+    #time.sleep(.1)
     # Height
     try:
         element=find_element_by_name(str(locator['height']))
@@ -239,6 +244,7 @@ def patient_demographic_funct(demography_data,locator):
     except Exception as ex:
         print("Error from height",str(ex)) 
 
+    #time.sleep(.1)
     # Sex
     try:
         element=find_element_by_class_name('mat-select-value')
@@ -251,22 +257,24 @@ def patient_demographic_funct(demography_data,locator):
     except Exception as ex:
         print("Error from sex",str(ex)) 
 
+        
         # Button
         """ wait_until_page_load_by_class_name('mat-flat-button')
         elements=find_elements_by_class_name('mat-flat-button')
         elements[1].click() """
+    time.sleep(1)
 
 # Patient contact
 def patient_contact_funct(patient_contact_data,locator):
 
     #wait_until_page_load_by_id('mat-error')
 
-    time.sleep(.2)
+    #time.sleep(.5)
 
 
     elements=find_elements_by_class_name('mat-input-element')
 
-        
+    #time.sleep(.5)
     # Primary contact number
     try:
         element=find_element_by_xpath(str(locator['primary_contact_number']))
@@ -275,6 +283,7 @@ def patient_contact_funct(patient_contact_data,locator):
     except Exception as ex:
         print("Error from primary contact number",str(ex)) 
 
+    #time.sleep(.5)
     # Email ID
     try:
         element=find_element_by_name(str(locator['email_id']))
@@ -283,6 +292,7 @@ def patient_contact_funct(patient_contact_data,locator):
     except Exception as ex:
         print("Error from email ID",str(ex)) 
 
+    #time.sleep(.1)
     # Country
     try:
         element=find_element_by_name(str(locator['country']))
@@ -294,6 +304,7 @@ def patient_contact_funct(patient_contact_data,locator):
     except Exception as ex:
         print("Error from country",str(ex)) 
 
+    #time.sleep(.1)
     # Zip code
     try:
         element=find_element_by_name(str(locator['zip_code']))
@@ -302,6 +313,7 @@ def patient_contact_funct(patient_contact_data,locator):
     except Exception as ex:
         print("Error from zip code",str(ex)) 
 
+    #time.sleep(.1)
     # Street adress1
     try:
         element=find_element_by_name(str(locator['street_adress_1']))
@@ -310,6 +322,7 @@ def patient_contact_funct(patient_contact_data,locator):
     except Exception as ex:
         print("Error from street adress 1",str(ex)) 
 
+    #time.sleep(.1)
     # Street adress2
     try:
         element=find_element_by_name(str(locator['street_adress_2']))
@@ -318,6 +331,7 @@ def patient_contact_funct(patient_contact_data,locator):
     except Exception as ex:
         print("Error from street adress 2",str(ex)) 
 
+    #time.sleep(.1)
     # State
     try:
         element=find_element_by_name(str(locator['state']))
@@ -327,6 +341,7 @@ def patient_contact_funct(patient_contact_data,locator):
 
     #time.sleep(1)
 
+    #time.sleep(.1)
     # City
     try:
         element=find_element_by_name(str(locator['city']))
@@ -334,6 +349,7 @@ def patient_contact_funct(patient_contact_data,locator):
     except Exception as ex:
         print("Error from city",str(ex)) 
 
+    #time.sleep(.1)
     # Emergency contact name
     try:
         element=find_element_by_name(str(locator['emergency_contact_name']))
@@ -342,6 +358,7 @@ def patient_contact_funct(patient_contact_data,locator):
     except Exception as ex:
         print("Error from emergency contact name",str(ex)) 
 
+    #time.sleep(.1)
     # Emergency contact number
     try:
         element=find_element_by_xpath(str(locator['emergency_contact_number']))
@@ -368,6 +385,7 @@ def patient_contact_funct(patient_contact_data,locator):
 
 # Provider info function
 def provider_info_funct(provider_info_data,locator):
+    time.sleep(.5)
 
     elements=find_elements_by_class_name('mat-select-value')
 
@@ -376,7 +394,7 @@ def provider_info_funct(provider_info_data,locator):
         element=find_element_by_xpath(str(locator['prescribing_physician']))
         element.click()
         wait_until_page_load_by_class_name('mat-option-text')
-        time.sleep(.1)
+        time.sleep(.5)
         #print(str(find_element_by_class_name('mat-option-text').text))
         element=select_value_funct(find_elements_by_class_name('mat-option-text'),str(provider_info_data['prescribingPhysician']))
         element.click()
@@ -384,7 +402,7 @@ def provider_info_funct(provider_info_data,locator):
         print("Error from prescribing physician",str(ex)) 
 
     # Referal Physician
-    try:
+    """  try:
         wait_until_page_load_by_class_name('mat-select-value')
         element=find_element_by_xpath(str(locator['referal_physician']))
         element.click()
@@ -393,7 +411,7 @@ def provider_info_funct(provider_info_data,locator):
         element=select_value_funct(find_elements_by_class_name('mat-option-text'),str(provider_info_data['referalPhysician']))
         element.click()
     except Exception as ex:
-        print("Error from referal physician",str(ex)) 
+        print("Error from referal physician",str(ex)) """ 
           
 
     # Interpreting Physician
@@ -401,7 +419,7 @@ def provider_info_funct(provider_info_data,locator):
         wait_until_page_load_by_class_name('mat-select-value')
         element=find_element_by_xpath(str(locator['interpreting_physycian']))
         element.click()
-        time.sleep(0.1)
+        time.sleep(0.5)
         wait_until_page_load_by_class_name('mat-option-text')
         element=select_value_funct(find_elements_by_class_name('mat-option-text'),str(provider_info_data['interpretingPhysician']))
         element.click()
@@ -413,7 +431,7 @@ def provider_info_funct(provider_info_data,locator):
         wait_until_page_load_by_class_name('mat-select-value')
         element=find_element_by_xpath(str(locator['preliminary_interpreting_physician']))
         element.click()
-        time.sleep(.1)
+        time.sleep(.5)
         wait_until_page_load_by_class_name('mat-option-text')
         element=select_value_funct(find_elements_by_class_name('mat-option-text'),str(provider_info_data['preliminaryInterpretingPhysician']))
         element.click()
@@ -425,7 +443,7 @@ def provider_info_funct(provider_info_data,locator):
         wait_until_page_load_by_class_name('mat-select-value')
         element=find_element_by_xpath(str(locator['technician']))
         element.click()
-        time.sleep(0.1)
+        time.sleep(0.5)
         wait_until_page_load_by_class_name('mat-option-text')
         element=select_value_funct(find_elements_by_class_name('mat-option-text'),str(provider_info_data['technician']))
         element.click()
@@ -443,6 +461,8 @@ def provider_info_funct(provider_info_data,locator):
 def procedure_info_funct(procedure_info_data,locator):
 
     elements=find_elements_by_class_name('mat-input-element')
+
+    time.sleep(.5)
 
     # Prescription ID
     try:
@@ -474,7 +494,7 @@ def procedure_info_funct(procedure_info_data,locator):
         element=find_element_by_xpath(str(locator['procedure_duration']))
         browser.implicitly_wait(50)
         element.click()
-        time.sleep(.1)
+        time.sleep(.5)
         wait_until_page_load_by_class_name('mat-option-text')
         element=select_value_funct(find_elements_by_class_name('mat-option-text'),str(procedure_info_data['procedureDuration']))
         element.click()
@@ -495,7 +515,7 @@ def procedure_info_funct(procedure_info_data,locator):
         wait_until_page_load_by_class_name('w100')
         element=find_element_by_xpath(str(locator['location_group']))
         element.click()
-        time.sleep(.1)
+        time.sleep(.5)
         wait_until_page_load_by_class_name('nested-menu-item')
         #element_=select_value_funct(find_elements_by_class_name('mat-option-text'),str(procedure_info_data['locationGroup']))
         element=find_element_by_class_name('nested-menu-item')
@@ -508,16 +528,29 @@ def procedure_info_funct(procedure_info_data,locator):
     except Exception as ex:
         print('Error from location group : ',str(ex))
 
+    #time.sleep(2)
+
     # Biosensor ID
     """ try:
         element=find_element_by_name(str(locator['biosensor_id']))
         element.send_keys(str(procedure_info_data['biosensorID']))
+        time.sleep(.1)
+        browser.find_element(By.CLASS_NAME,"mat-option-text").click()
     except Exception as ex:
         print("Error from biosensor ID",str(ex)) """ 
 
 
+    """ try:
+        element = browser.find_element(By.NAME,'biosensor_start_date').click()
+        time.sleep(.5)
+        browser.find_element(By.XPATH,'/html/body/div[2]/div[4]/div/owl-date-time-container/div[2]/div/button[2]').click()
+    except:
+        print()
+ """
+
 # Additional info function
 def additional_info_funct(additional_info_data,locator):
+    time.sleep(.5)
     try:
         # Aditional information
 
@@ -557,6 +590,8 @@ def additional_info_funct(additional_info_data,locator):
 
 # Billing info function
 def billing_info_funct(billing_info_data,locator):
+
+    time.sleep(.5)
         
     elements=find_elements_by_class_name('mat-select-value')
 
@@ -791,11 +826,11 @@ with open('patient_register.json') as json_file:
 
 
 print(admit_patient_test_data_generation())
-login_funct("deepak@probeplus.in","deepak123")
+login_funct("deepak@probeplus.in","ecg123")
 wait_until_page_load_by_class_name("app-card")
 #find_element_by_class_name('registerBtn-in-card').click()
 #wait_until_page_load_by_id('mat-dialog-0')
-for i in range(0,100):
+for i in range(0,100000):
     data=admit_patient_test_data_generation()
     print(data)
     #print(locators.locators['admit_patient'])
@@ -804,7 +839,7 @@ for i in range(0,100):
     wait_until_page_load_by_id('mat-dialog-0')
     new_patient_registration_funct(data,locators.locators['admit_patient'])
     time.sleep(.5)
-    pateient_registration_successfull_popup_funct()
+    """ pateient_registration_successfull_popup_funct()
     #find_element_by_xpath('/html/body/app-root/app-root/app-header/mat-toolbar/div[2]/app-navigation/span/span[1]/a').click()
     time.sleep(.5)
     wait_until_page_load_by_xpath('/html/body/app-root/app-root/app-summary/div/div/div[1]/app-setting-card[3]/div/div[1]/div[3]/a')
@@ -813,7 +848,7 @@ for i in range(0,100):
     time.sleep(.2)
     admit_patient_verify_funct()
     find_element_by_xpath('/html/body/app-root/app-root/app-header/mat-toolbar/div[2]/app-navigation/span/span[1]/a').click()
-    time.sleep(1)
+    time.sleep(1) """
     browser.refresh()
     time.sleep(2)
 
